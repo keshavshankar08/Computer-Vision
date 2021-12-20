@@ -1,6 +1,6 @@
 # Computer-Vision
-In this repository, I have various projects that can use your computer's webcam to emulate different vision techniques.<br/>
-------------------------------------------------------------------------------------------------------------------------<br/>
+In this repository, I have various programs that can use your computer's webcam to emulate different vision techniques.<br/>
+----------------------------------------------------------------------------------------------------------------<br/>
 **RUNNING A FILE**<br/>
 -Make sure you have installed the packages that are required for each of the programs (Look at the imports at the top)<br/>
 -Change the camera object to whatever camera you want to use (Default "VideoCapture(0)" is your computer's webcam)<br/>
