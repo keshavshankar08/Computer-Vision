@@ -21,13 +21,13 @@ img_initial = cv.cvtColor(img_initial, cv.COLOR_BGR2GRAY)
 temp_cont_frame = np.ones((img_initial.shape[0], img_initial.shape[1]))
 
 classNames = []
-classFile = '/Users/keshavshankar/VSCODEPROJECTS/DVS_EMULATOR/ObjectDetector/coco.names'
+classFile = 'coco.names'
 with open(classFile,'rt') as f:
     classNames = f.read().rstrip('\n').split('\n')
 
 #get file paths
-weightsPath = "/Users/keshavshankar/VSCODEPROJECTS/DVS_EMULATOR/ObjectDetector/frozen_inference_graph.pb"
-configPath = "/Users/keshavshankar/VSCODEPROJECTS/DVS_EMULATOR/ObjectDetector/objectModel.pbtxt"
+weightsPath = "frozen_inference_graph.pb"
+configPath = "objectModel.pbtxt"
 
 #network object setup
 network = cv.dnn_DetectionModel(weightsPath,configPath)
