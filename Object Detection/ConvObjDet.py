@@ -10,13 +10,13 @@ kernel = np.array(([-1,-1,-1],[-1,8,-1],[-1,-1,-1]),np.float32) #convolusion ker
 #video capture object
 camera = cv.VideoCapture(0)
 classNames = []
-classFile = '/Users/keshavshankar/VSCODEPROJECTS/DVS_EMULATOR/ObjectDetector/coco.names'
+classFile = 'coco.names'
 with open(classFile,'rt') as f:
     classNames = f.read().rstrip('\n').split('\n')
 
 #get file paths
-weightsPath = "/Users/keshavshankar/VSCODEPROJECTS/DVS_EMULATOR/ObjectDetector/frozen_inference_graph.pb"
-configPath = "/Users/keshavshankar/VSCODEPROJECTS/DVS_EMULATOR/ObjectDetector/objectModel.pbtxt"
+weightsPath = "frozen_inference_graph.pb"
+configPath = "objectModel.pbtxt"
 
 #network object setup
 network = cv.dnn_DetectionModel(weightsPath,configPath)
